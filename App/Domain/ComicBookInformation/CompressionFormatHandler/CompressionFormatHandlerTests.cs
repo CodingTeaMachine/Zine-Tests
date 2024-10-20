@@ -1,6 +1,6 @@
 using Zine.App.Domain.ComicBookInformation.CompressionFormatHandler;
 
-namespace Zine.Tests.App.Domain.ComicBookInformation.CompressionFormatHandler.Handlers;
+namespace Zine.Tests.App.Domain.ComicBookInformation.CompressionFormatHandler;
 
 public class CompressionFormatHandlerTests : IDisposable
 {
