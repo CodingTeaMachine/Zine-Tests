@@ -2,18 +2,8 @@ using Zine.App.Domain.ComicBookInformation.CompressionFormatHandler;
 
 namespace Zine.Tests.App.Domain.ComicBookInformation.CompressionFormatHandler;
 
-public class CompressionFormatHandlerTests : IDisposable
+public class CompressionFormatHandlerTests : InputFileHandlerTests
 {
-	public CompressionFormatHandlerTests()
-	{
-		Info.CreateOutputDirectoryIfNotExists();
-	}
-	
-	public void Dispose()
-	{
-		Info.DeleteOutputDirectoryIfExists();
-	}
-	
 	[Fact]
 	public void Inputting_A_Zip_Compressed_Comic_Book_Should_Extract_Cover_Image_Into_Output_Directory()
 	{
