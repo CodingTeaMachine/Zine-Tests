@@ -7,17 +7,11 @@ public static class Info
 
 	public static void CreateOutputDirectoryIfNotExists()
 	{
-		if(!Directory.Exists(TestOutputFileDirectory))
-		{
-			Directory.CreateDirectory(TestOutputFileDirectory);
-		}
+		if (!Directory.Exists(TestOutputFileDirectory)) Directory.CreateDirectory(TestOutputFileDirectory);
 	}
-	
+
 	public static void DeleteOutputDirectoryIfExists()
 	{
-		if(Directory.Exists(TestOutputFileDirectory))
-		{
-			Directory.Delete(TestOutputFileDirectory, true);
-		}
+		if (Directory.Exists(TestOutputFileDirectory)) Directory.Delete(TestOutputFileDirectory, true);
 	}
 }

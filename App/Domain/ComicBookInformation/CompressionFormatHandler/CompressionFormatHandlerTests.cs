@@ -21,6 +21,4 @@ public class CompressionFormatHandlerTests : InputFileHandlerTests
 
 		Assert.Single(Directory.GetFiles(Info.TestOutputFileDirectory));
 	}
-
-	
 }

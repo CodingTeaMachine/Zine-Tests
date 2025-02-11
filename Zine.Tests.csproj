@@ -37,5 +37,9 @@
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Resources\pageNamingConvention\" />
+	</ItemGroup>
 
 </Project>
