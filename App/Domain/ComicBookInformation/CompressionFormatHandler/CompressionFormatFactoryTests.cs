@@ -1,4 +1,5 @@
-using Zine.App.Domain.ComicBookInformation.CompressionFormatHandler;
+
+using Zine.App.Helpers.Compression;
 
 namespace Zine.Tests.App.Domain.ComicBookInformation.CompressionFormatHandler;
 

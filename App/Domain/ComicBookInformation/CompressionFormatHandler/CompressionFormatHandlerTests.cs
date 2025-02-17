@@ -1,4 +1,4 @@
-using Zine.App.Domain.ComicBookInformation.CompressionFormatHandler;
+using Zine.App.FileHelpers;
 
 namespace Zine.Tests.App.Domain.ComicBookInformation.CompressionFormatHandler;
 
@@ -9,7 +9,8 @@ public class CompressionFormatHandlerTests : InputFileHandlerTests
 	{
 		const string coverImageName = "artifacts_00_01.jpg";
 		var filePath = Path.Join(Directory.GetCurrentDirectory(), Info.TestFileDirectory, "compression", "zip_based_cb.cbz");
-		new CompressedFileHandler(filePath, Info.TestOutputFileDirectory).SaveThumbnailToDisc(coverImageName, "test.jpg");
+
+		new ComicBookImageHandler().SaveThumbnailToDisc(filePath, coverImageName, "test.jpg", Info.TestOutputFileDirectory);
 
 		Assert.Single(Directory.GetFiles(Info.TestOutputFileDirectory));
 	}
@@ -19,7 +20,7 @@ public class CompressionFormatHandlerTests : InputFileHandlerTests
 	{
 		const string coverImageName = "Artifacts 01 (Kingpin) pg01.jpg";
 		var filePath = Path.Join(Directory.GetCurrentDirectory(), Info.TestFileDirectory, "compression" , "rar_based_cb.cbr");
-		new CompressedFileHandler(filePath, Info.TestOutputFileDirectory).SaveThumbnailToDisc(coverImageName, "test.jpg");
+		new ComicBookImageHandler().SaveThumbnailToDisc(filePath, coverImageName, "test.jpg", Info.TestOutputFileDirectory);
 
 		Assert.Single(Directory.GetFiles(Info.TestOutputFileDirectory));
 	}
