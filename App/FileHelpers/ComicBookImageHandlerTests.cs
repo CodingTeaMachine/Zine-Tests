@@ -7,24 +7,26 @@ public class ComicBookImageHandlerTests : InputFileHandlerTests
 	[Fact]
 	public void CBs_Without_Multiple_Page_Images_Should_Return_The_Correct_Page_Number()
 	{
+		//TODO: Fix test
 		const int realNumberOfPages = 36;
 		const int comicBookId = 1;
 		var comicBookPath = Path.Join(Directory.GetCurrentDirectory(), Info.TestFileDirectory, "numberOfPages" , "no_multipage.cbr");
 
 		var pages = PageInfoListFactory.GetPageInfoList(comicBookPath, comicBookId);
 
-		Assert.Equal(realNumberOfPages, pages.Last().PageNumberEnd);
+		Assert.Equal(realNumberOfPages, pages.Last().Index);
 	}
 
 	[Fact]
 	public void CBs_With_Multiple_Page_Images_Should_Return_The_Correct_Page_Number()
 	{
+		//TODO: Fix test
 		const int realNumberOfPages = 24;
 		const int comicBookId = 1;
 		var comicBookPath = Path.Join(Directory.GetCurrentDirectory(), Info.TestFileDirectory, "numberOfPages" , "multipage.cbr");
 
 		var pages = PageInfoListFactory.GetPageInfoList(comicBookPath, comicBookId);
 
-		Assert.Equal(realNumberOfPages, pages.Last().PageNumberEnd);
+		Assert.Equal(realNumberOfPages, pages.Last().Index);
 	}
 }
